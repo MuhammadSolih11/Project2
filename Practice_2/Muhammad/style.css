@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.item1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.item1>h2{
+    text-align: center;
+}
+.item1>p{
+    text-align: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 500px;
+    gap: 50px;
+}
+.card{
+    border: 5px solid silver;
+    
+
+}

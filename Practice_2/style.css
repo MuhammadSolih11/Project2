@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgb(6, 6, 107);
+    color: plum;
+}
+
+.menu{
+    display: flex;
+    gap: 25px;
+    
+}
+.btn{
+padding: 10px 20px;
+background: #ff6545;
+border: none;
+color: whitesmoke;
+cursor: pointer;
+transition: background 0.5s;
+}
+
+.btn:hover{
+background: blueviolet;
+color: white;
+}
+.menu>a{
+    text-decoration: none;
+    color: bisque;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.menu>a:hover{
+    color: yellow;
+    font-size: 25px;
+}
+.hero{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 600px;
+background-image: url(minion-desktop-isnj64ic3taaqfbi.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+color: rgb(162, 5, 29);
+text-align: center;
+padding: 20px;
+font-weight: 900;
+}
+
+.hero-content { 
+display: flex;
+flex-direction: column;
+gap: 20px;
+max-width: 700px;
+background-color: rgba(0, 0, 0, 0.7);
+padding: 40px;
+border-radius: 15px;
+opacity: 0;
+transform: translateY(50px);
+transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.hero-content.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+}
+.card{
+    background-color: #eee;
+    padding: 25px;
+    text-align: center;
+    flex: 1 1 calc(33.333% -40px );
+    /*flex : grow shrink basis*/
+    transition: transform 0.5s, box-shadow 0.5s;
+    box-shadow: 0 5px 15px rgba(143, 1, 88, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.card:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 10px 25px rgba(red, rgb(6, 237, 13), blue, 0.5);
+}
+
+.card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+@media(max-width:770px) {
+    .card{
+        flex: 1 1 calc(50% -20px);
+    }
+}
+@media(max-width:480px) {
+    .card{
+        flex: 1 1 100%;
+    }
+}
